@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BunnyCare - 토끼 전문 병원 찾기</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="logo.png" alt="BunnyCare Logo" class="logo-img">
+            </a>
+            <nav class="nav">
+                <a href="#">병원 찾기</a>
+                <a href="#">건강 정보</a>
+                <a href="#">버니케어</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1 class="hero-title">지역별 <span class="highlight">토끼 전문</span> 병원</h1>
+                <p class="hero-desc">반려토끼를 위한 전문 의료진이 있는 병원을 찾아보세요.<br>24시간 응급 진료 및 야간 진료가 가능한 병원 정보를 한눈에 확인하실 수 있습니다.
+                </p>
+            </section>
+
+            <!-- Search Filter Box -->
+            <section class="search-box">
+                <!-- Region Filter -->
+                <div class="filter-group">
+                    <div class="filter-label">
+                        <span class="icon">📍</span> 지역 선택
+                    </div>
+                    <div class="filter-options region-options" id="region-options">
+                        <!-- Filled by JS or static? Initial static for now then dynamic is safer but static matches image easier -->
+                        <button class="filter-btn active" data-region="all">전체</button>
+                        <button class="filter-btn" data-region="seoul">서울</button>
+                        <button class="filter-btn" data-region="gyeonggi">경기</button>
+                        <button class="filter-btn" data-region="incheon">인천</button>
+                        <button class="filter-btn" data-region="busan">부산</button>
+                        <button class="filter-btn" data-region="daegu">대구</button>
+                        <button class="filter-btn" data-region="daejeon">대전</button>
+                        <button class="filter-btn" data-region="gwangju">광주</button>
+                        <button class="filter-btn" data-region="jeju">제주</button>
+                    </div>
+                </div>
+
+                <!-- Condition Filter -->
+                <div class="filter-group">
+                    <div class="filter-label">
+                        <span class="icon">🩺</span> 진료 조건
+                    </div>
+                    <div class="filter-options condition-options">
+                        <label class="toggle-btn">
+                            <input type="checkbox" id="filter-24h">
+                            <span class="btn-content">🕒 24시간 운영</span>
+                        </label>
+                        <label class="toggle-btn">
+                            <input type="checkbox" id="filter-night">
+                            <span class="btn-content">🌙 야간 진료</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="search-action">
+                    <button class="search-confirm-btn" id="search-btn">🔍 조건 검색</button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results">
+                <div class="results-header">
+                    검색 결과 <span class="count" id="result-count">5</span>건
+                </div>
+
+                <div class="hospital-list-header">
+                    <div class="col-name">병원명</div>
+                    <div class="col-info">주소/연락처</div>
+                    <div class="col-hours">운영시간</div>
+                    <div class="col-tags">특이사항</div>
+                </div>
+
+                <div class="hospital-list" id="hospital-list">
+                    <!-- Javascript will populate this -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="BunnyCare Logo" class="logo-img-sm">
+            </div>
+            <div class="footer-links">
+                <a href="#">이용약관</a>
+                <a href="#">개인정보처리방침</a>
+                <a href="#">문의하기</a>
+            </div>
+            <div class="footer-copy">
+                @ 2025 BunnyCare. All rights reserved.<br>
+                본 서비스에서 제공하는 정보는 참고용이며, 실제 병원 운영 시간은 변경될 수 있습니다. 방문 전 반드시 전화로 확인하시기 바랍니다.
+            </div>
+        </div>
+    </footer>
+
+    <script src="hospital_data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
