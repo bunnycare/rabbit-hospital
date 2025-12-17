@@ -1,4 +1,4 @@
-﻿const hospitalDataRAW = `region,name,address,phone,hours,is_24h,has_night,has_sunday,has_holiday,,
+region,name,address,phone,hours,is_24h,has_night,has_sunday,has_holiday,,
 서울,로잔동물의료센터,서울 관악구 관악로29길 3,0507-1457-7589,"평일 10:00 - 20:00
 토 10:00 - 20:00
 일, 공휴일 휴무
@@ -599,4 +599,4 @@
 토 09:00 - 18:00
 일요일 휴무
 
-휴게시간 12:00 - 13:30",FALSE,FALSE,FALSE,FALSE,,`;
+휴게시간 12:00 - 13:30",FALSE,FALSE,FALSE,FALSE,,

@@ -1,11 +1,10 @@
-﻿const hospitalDataRAW = `region,name,address,phone,hours,is_24h,has_night,has_sunday,has_holiday,,
+region,name,address,phone,hours,is_24h,has_night,has_sunday,has_holiday,,
 서울,로잔동물의료센터,서울 관악구 관악로29길 3,0507-1457-7589,"평일 10:00 - 20:00
 토 10:00 - 20:00
 일, 공휴일 휴무
 
 휴게시간 13:00 - 14:00",FALSE,FALSE,FALSE,FALSE,,8시 이후 = 야간진료
-서울,"서울대학교관악캠퍼스
-수의대부속동물병원",서울 관악구 관악로 1,02-880-8661,"월 9:00 - 18:00
+서울,서울대학교관악캠퍼스수의대부속동물병원,서울 관악구 관악로 1,02-880-8661,"월 9:00 - 18:00
 화-금 9:00 - 24:00
 주말, 공휴일 휴무",TRUE,TRUE,FALSE,FALSE,,
 서울,한성동물병원,서울 관악구 신림로 265,02-872-7609,"월-토 10:00 - 19:00
@@ -599,4 +598,4 @@
 토 09:00 - 18:00
 일요일 휴무
 
-휴게시간 12:00 - 13:30",FALSE,FALSE,FALSE,FALSE,,`;
+휴게시간 12:00 - 13:30",FALSE,FALSE,FALSE,FALSE,,
