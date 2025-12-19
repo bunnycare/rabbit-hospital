@@ -765,3 +765,351 @@ a {
     white-space: nowrap;
     border-width: 0;
 }
+
+/* Bunny Care Page Styles */
+
+/* Hero Section */
+.bunny-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bunny-hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.bunny-hero-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    color: var(--text-color);
+}
+
+.bunny-hero-title .highlight {
+    color: var(--primary-color);
+}
+
+.bunny-hero-desc {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.hero-btn:hover {
+    background-color: black;
+    transform: translateY(-2px);
+}
+
+.bunny-hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bunny-hero-image img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 400px;
+    z-index: 1;
+}
+
+/* Floating Badges */
+.floating-badge {
+    position: absolute;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0, 230, 160, 0.4);
+    animation: float 3s ease-in-out infinite;
+    z-index: 2;
+}
+
+.badge-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.badge-2 {
+    bottom: 20%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+.badge-3 {
+    top: 10%;
+    right: 20%;
+    background: #00BDD6;
+    /* Blue-ish for variety or keep primary */
+    box-shadow: 0 4px 12px rgba(0, 189, 214, 0.4);
+    animation-delay: 0.5s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Feature Cards */
+.feature-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.feature-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 0 60px;
+    /* Adjust padding to control spacing better with fixed height */
+    height: 464px;
+    /* Fixed height for uniformity */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card-text {
+    flex: 1;
+}
+
+.badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.badges .card-badge {
+    margin-bottom: 0;
+}
+
+.bg-green {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.bg-outline {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.card-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+.card-desc {
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.small-desc {
+    font-size: 13px;
+    color: #999;
+    margin-top: 8px;
+    display: block;
+}
+
+.card-image {
+    flex: 1.2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* Center image vertically */
+    justify-content: center;
+}
+
+.card-image img {
+    max-width: 100%;
+    max-height: 280px;
+    /* Constrain height to fit within card */
+    width: auto;
+    border-radius: 12px;
+    object-fit: contain;
+    /* Ensure image is not cut off */
+    transition: transform 0.3s;
+}
+
+/* Enlarge 1st and 3rd card images for better visibility */
+.feature-card:nth-of-type(1) .card-image img,
+.feature-card:nth-of-type(3) .card-image img {
+    max-height: 360px;
+    /* Allow them to be larger */
+    transform: scale(1.1);
+    /* Zoom in slightly */
+    transform-origin: center;
+}
+
+/* Feedback Section */
+.feedback-section {
+    background: linear-gradient(180deg, #F0FFFA 0%, #E0FDF4 100%);
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 24px;
+    margin-bottom: 80px;
+}
+
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.feedback-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.feedback-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.feedback-btn:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .bunny-hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .bunny-hero-text {
+        margin-top: 20px;
+    }
+
+    .bunny-hero-title {
+        font-size: 32px;
+    }
+
+    .bunny-hero-image img {
+        max-width: 60%;
+        /* Reduce image size */
+        max-height: 220px;
+    }
+
+    /* Restore and adjust floating badges for mobile */
+    .badge-1,
+    .badge-2,
+    .badge-3 {
+        display: block;
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .badge-1 {
+        top: 0;
+        left: -20px;
+    }
+
+    .badge-2 {
+        bottom: 0;
+        right: -20px;
+    }
+
+    .badge-3 {
+        top: 0;
+        right: -20px;
+    }
+
+    .feature-card {
+        flex-direction: column;
+        padding: 24px;
+        text-align: center;
+        /* Center text */
+        height: auto;
+        /* Reset fixed height */
+        align-items: center;
+        /* Center children */
+    }
+
+    .badges {
+        justify-content: center;
+        /* Center badges */
+    }
+
+    .card-image {
+        width: 100%;
+        display: flex;
+        /* Ensure it's a flex container */
+        justify-content: center !important;
+        /* Force center alignment */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+
+}
+
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+}

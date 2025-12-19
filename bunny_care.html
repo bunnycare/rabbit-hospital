@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BunnyCare - 토끼 전문 병원 찾기</title>
+    <title>BunnyCare - 토끼를 위한 올바른 정보</title>
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="style.css">
@@ -12,7 +12,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="버니케어">
     <meta property="og:description" content="토끼를 위한 정보를 안내합니다.">
-    <meta property="og:image" content="og_thumbnail_v2.jpg">
+    <meta property="og:image" content="hero_rabbit_3d.png">
     <meta property="og:type" content="website">
 </head>
 
@@ -20,14 +20,14 @@
     <!-- Header -->
     <header class="header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <img src="logo.png" alt="BunnyCare Logo" class="logo-img">
             </a>
             <nav class="nav">
-                <a href="index.html" class="active" style="color:var(--primary-color)">병원 찾기</a>
+                <a href="index.html">병원 찾기</a>
                 <a href="coming_soon.html">건강 정보</a>
                 <a href="abandoned_coming_soon.html">유기 토끼</a>
-                <a href="bunny_care.html">버니케어</a>
+                <a href="bunny_care.html" class="active" style="color:var(--primary-color)">버니케어</a>
             </nav>
         </div>
     </header>
@@ -36,100 +36,75 @@
     <main class="main">
         <div class="container">
             <!-- Hero Section -->
-            <section class="hero">
-                <div class="hero-content">
-                    <h1 class="hero-title">지역별 <span class="highlight">토끼 전문</span> 병원</h1>
-                    <p class="hero-desc">반려토끼를 위한 전문 의료진이 있는 병원을 찾아보세요.<br>24시간 응급 진료 및 야간 진료가 가능한 병원 정보를 한눈에 확인하실 수
-                        있습니다.
-                    </p>
+            <section class="bunny-hero">
+                <div class="bunny-hero-text">
+                    <h1 class="bunny-hero-title">토끼를 위한 올바른 정보<br><span class="highlight">BunnyCare</span></h1>
+                    <p class="bunny-hero-desc">토끼의 모든 것.<br>버니케어에서 시작해요.</p>
+                    <!-- Link to report/share form as a generic action or just a placeholder button -->
+                    <a href="#" class="hero-btn" id="share-btn">공유하기</a>
                 </div>
-                <div class="search-action">
-                    <input type="text" id="name-search" placeholder="병원명 검색" class="search-input">
-                    <button class="search-confirm-btn" id="search-btn">
-                        <span>검색하기</span>
-                        <img src="search_icon.png" alt="Search" class="search-icon-img">
-                    </button>
-                </div>
-            </section>
-
-            <!-- Search Filter Box -->
-            <section class="search-box">
-                <!-- Region Filter -->
-                <div class="filter-group">
-                    <div class="filter-label">
-                        지역 선택
-                    </div>
-                    <div class="filter-options region-options" id="region-options">
-                        <!-- Filled by JS or static? Initial static for now then dynamic is safer but static matches image easier -->
-                        <button class="filter-btn active" data-region="all">전체</button>
-                        <button class="filter-btn" data-region="seoul">서울</button>
-                        <button class="filter-btn" data-region="gyeonggi">경기</button>
-                        <button class="filter-btn" data-region="incheon">인천</button>
-                        <button class="filter-btn" data-region="gangwon">강원</button>
-                        <button class="filter-btn" data-region="chungcheong">충청</button>
-                        <button class="filter-btn" data-region="sejong">세종</button>
-                        <button class="filter-btn" data-region="daejeon">대전</button>
-                        <button class="filter-btn" data-region="busan">부산</button>
-                        <button class="filter-btn" data-region="ulsan">울산</button>
-                        <button class="filter-btn" data-region="daegu">대구</button>
-                        <button class="filter-btn" data-region="gyeongsang">경상</button>
-                        <button class="filter-btn" data-region="jeolla">전라도</button>
-                        <button class="filter-btn" data-region="gwangju">광주</button>
-                        <button class="filter-btn" data-region="jeju">제주</button>
-                    </div>
-                </div>
-
-                <!-- Condition Filter -->
-                <div class="filter-group">
-                    <div class="filter-label">
-                        진료 조건
-                    </div>
-                    <div class="filter-options condition-options">
-                        <label class="toggle-btn">
-                            <input type="checkbox" id="filter-24h">
-                            <span class="btn-content">24시간 운영</span>
-                        </label>
-                        <label class="toggle-btn">
-                            <input type="checkbox" id="filter-night">
-                            <span class="btn-content">야간 진료</span>
-                        </label>
-                        <label class="toggle-btn">
-                            <input type="checkbox" id="filter-sunday">
-                            <span class="btn-content">일요일 진료</span>
-                        </label>
-                        <label class="toggle-btn">
-                            <input type="checkbox" id="filter-holiday">
-                            <span class="btn-content">공휴일 진료</span>
-                        </label>
-                    </div>
+                <div class="bunny-hero-image">
+                    <!-- Floating badges -->
+                    <div class="floating-badge badge-1">유기 토끼</div>
+                    <div class="floating-badge badge-2">건강 정보</div>
+                    <div class="floating-badge badge-3">병원 찾기</div>
+                    <img src="hero_rabbit_3d.png" alt="Bunny Care 3D Rabbit">
                 </div>
             </section>
 
-            <!-- Results Section -->
-            <section class="results">
-                <div class="notice-box">
-                    <div class="notice-content">
-                        본 서비스에서 제공하는 정보는 참고용이며, 실제 병원 운영 시간은 변경될 수 있습니다. <strong>방문 전 반드시 전화로 확인하시기 바랍니다.</strong>
+            <!-- Feature Cards -->
+            <section class="feature-cards">
+                <!-- Card 1: Hospital -->
+                <div class="feature-card">
+                    <div class="card-text">
+                        <div class="card-badge bg-green">병원 찾기</div>
+                        <h2 class="card-title">믿을 만한<br>토끼 전문 병원</h2>
+                        <p class="card-desc">버니케어가 직접 알아본<br>토끼 전문 병원으로 케어하세요.</p>
                     </div>
-                    <a href="https://forms.gle/1yJyCAqi2Ywu5xgq6" target="_blank" class="report-btn">수정/제보하기</a>
+                    <div class="card-image">
+                        <img src="card_hospital_preview.png" alt="Hospital List">
+                    </div>
                 </div>
 
-                <div class="results-header">
-                    검색 결과 <span class="count" id="result-count">5</span>건
+                <!-- Card 2: Health Info -->
+                <div class="feature-card">
+                    <div class="card-text">
+                        <div class="badges">
+                            <div class="card-badge bg-green">건강 정보</div>
+                            <div class="card-badge bg-outline">오픈 예정</div>
+                        </div>
+                        <h2 class="card-title">토끼에 대한<br>정확한 케어 방법</h2>
+                        <p class="card-desc">토끼 보호자가 꼭 알아야 할<br>건강 정보를 소개합니다.</p>
+                    </div>
+                    <div class="card-image">
+                        <img src="card_care_info.png" alt="Rabbit Care Info">
+                    </div>
                 </div>
 
-                <div class="hospital-list-header">
-                    <div class="col-name">병원명</div>
-                    <div class="col-info">주소/연락처</div>
-                    <div class="col-hours">운영시간</div>
-                    <div class="col-tags">특이사항</div>
-                </div>
-
-                <div class="hospital-list" id="hospital-list">
-                    <!-- Javascript will populate this -->
+                <!-- Card 3: Abandoned Rabbits -->
+                <div class="feature-card">
+                    <div class="card-text">
+                        <div class="badges">
+                            <div class="card-badge bg-green">유기 토끼</div>
+                            <div class="card-badge bg-outline">오픈 예정</div>
+                        </div>
+                        <h2 class="card-title">가족이 필요한<br>유기 토끼들</h2>
+                        <p class="card-desc">새로운 삶을 기다리는 아이들을 소개합니다<br><span class="small-desc">* 자료 생성된 예시
+                                이미지입니다.</span></p>
+                    </div>
+                    <div class="card-image">
+                        <img src="card_abandoned_rabbit.png" alt="Abandoned Rabbits">
+                    </div>
                 </div>
             </section>
-        </div>
+            <!-- Feedback Section -->
+            <section class="feedback-section">
+                <div class="feedback-container"> <!-- Removed .container class from inner div -->
+                    <h2 class="feedback-title">버니케어에 의견을 들려주세요</h2>
+                    <a href="https://forms.gle/1yJyCAqi2Ywu5xgq6" target="_blank" class="feedback-btn">의견 남기기</a>
+                </div>
+            </section>
+        </div> <!-- Close main container here -->
     </main>
 
     <!-- Footer -->
@@ -154,8 +129,6 @@
         </div>
     </footer>
 
-    <script src="hospital_data.js"></script>
-    <script src="script.js"></script>
     <!-- TOS Modal -->
     <div class="modal-overlay" id="tos-modal">
         <div class="modal-container">
@@ -361,8 +334,8 @@
         </svg>
         <span class="sr-only">위로 가기</span>
     </button>
-
     <script src="modal.js"></script>
+    <script src="bunny_care.js"></script>
 </body>
 
 </html>
