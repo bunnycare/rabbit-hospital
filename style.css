@@ -514,6 +514,10 @@ a {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
     .header {
         height: auto;
         padding: 16px 0;
@@ -1108,7 +1112,8 @@ a {
 
 
 /* Tablet Responsive */
-@media (max-width: 1024px) {
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
     .container {
         padding: 0 40px;
     }
